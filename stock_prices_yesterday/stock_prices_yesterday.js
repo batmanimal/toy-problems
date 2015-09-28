@@ -13,7 +13,8 @@ No "shorting"—you must buy before you sell. You may not buy and sell in the sa
 
 
 var getMaxProfit = function(arr) {
-  var max = 0;
+  // set initial max
+  var max = arr[1] - arr[0];
   var adjustment = 0;
   var diff;
   // iterate over input array
@@ -39,4 +40,6 @@ var getMaxProfit = function(arr) {
 // TESTING 
 
 var stock_prices_yesterday = [ 4, 9, 10, 3, 7, 1, 9, 7, 4, 15 ];
-// console.log(getMaxProfit(stock_prices_yesterday));
+var dropping_prices = [10, 9, 8, 7, 6, 5, 4, 3, 2, 1 ];
+console.log(getMaxProfit(stock_prices_yesterday));
+console.log(getMaxProfit(dropping_prices));
